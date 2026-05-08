@@ -39,21 +39,14 @@ yes.addEventListener("mouseover", () => {
 
 });
 
+const fineScreen = document.getElementById("fineScreen");
+
 yes.addEventListener("click", () => {
 
-    document.body.innerHTML = `
-    <div style="
-    width:100vw;
-    height:100vh;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:'Press Start 2P',system-ui;
-    color:white;
-    font-size:30px;
-    ">
-    FINE...
-    </div>
-    `;
-});
+    fineScreen.style.display = "flex";
+
+    setTimeout(() => {
+
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1";
+
+    }, 3000);
