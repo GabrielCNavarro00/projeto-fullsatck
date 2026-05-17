@@ -53,6 +53,18 @@ canvas{
 .controls span{
 
     color:yellow;
-
     text-shadow:0 0 10px yellow;
+}
+
+.controls a{
+
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 10px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.controls a:hover{
+    color:yellow;
+    text-shadow:0 0 10px yellow;
+    text-decoration: underline;
 }
