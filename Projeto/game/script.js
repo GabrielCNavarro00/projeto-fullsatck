@@ -1053,9 +1053,9 @@ function morrer() {
     player.noChao = false;
 
     if (vidas <= 0) {
-        resetarJogo();
-        return;
-    }
+    window.location.href = "../final/lost.html";
+    return;
+}
 
     setTimeout(() => {
         invulneravel = false;
@@ -1442,13 +1442,18 @@ if (!colisao(novoWorldX, player.y)) {
     //COLOCAR PRA CHAMAR O MAPA AQUI E DAI VC CARREGA O LEVEL 2 DEPOIS
     if (colisaoFinal() && !miniMapa.aberto) {
 
-        // desbloqueia próxima fase
-        if (levelatual + 1 > faseMaxima) {
-            faseMaxima = levelatual + 1;
-        }
-
-        miniMapa.abrirMapa();
+    if (levelatual === 2) {
+        window.location.href = "../final/win.html";
         return;
+    }
+
+    // desbloqueia próxima fase
+    if (levelatual + 1 > faseMaxima) {
+        faseMaxima = levelatual + 1;
+    }
+
+    miniMapa.abrirMapa();
+    return;
     }
 }
 
